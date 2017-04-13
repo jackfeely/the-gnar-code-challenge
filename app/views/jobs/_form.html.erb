@@ -1,0 +1,24 @@
+<%= form_for(@job) do |f| %>
+
+  <div>
+    <%= f.label :poster %><br>
+    <%= f.text_field :poster %>
+  </div>
+  <div>
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+  <div>
+    <%= f.label :location %><br>
+    <%= f.text_field :location %>
+  </div>
+  <div>
+    <%= f.label :status %><br>
+    <%= f.select :status, [['New', 'new'], ['Pending', 'pending'], ['Complete', 'complete']] %>
+  </div>
+  <div>
+    <%= f.submit %>
+  </div>
+
+
+<% end %>

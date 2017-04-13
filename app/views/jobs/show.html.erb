@@ -1,0 +1,24 @@
+<h1>Job ID: <%= @job.id %></h1>
+
+<p>
+  <strong>Poster:</strong>
+  <%= @job.poster %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @job.category %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @job.location %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @job.status %>
+</p>
+
+<%= link_to 'Edit', edit_job_path(@job) %> |
+<%= link_to 'Back', jobs_path %>
