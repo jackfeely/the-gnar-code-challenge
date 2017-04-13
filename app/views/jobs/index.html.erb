@@ -1,7 +1,7 @@
-<h1>job postings</h1>
+<h1>Job Postings</h1>
 
 <% if @jobs.empty? %>
-  <%= link_to 'New Job', new_job_path %>
+  <%= link_to 'New Job', new_job_path, class: "button" %>
 
 <% else %>
 
@@ -22,14 +22,15 @@
         <tr>
           <td><%= job.created_at.strftime('%D') %></td>
           <td><%= job.poster %></td>
-          <td><%= job.category %></td>
-          <td><%= job.status %></td>
-          <td><%= link_to 'Edit', edit_job_path(job) %></td>
+          <td><%= job.category.capitalize %></td>
+          <td><%= job.status.capitalize %></td>
+          <td><%= link_to 'View', job_path(job) %> | <%= link_to 'Edit', edit_job_path(job) %> | <%= link_to 'Delete', job_path(job), method: :delete %></td>
         </tr>
       </tbody>
 
     <% end %>
-  </table>
+  </table><br><br>
 
-  <%= link_to 'New Job', new_job_path %>
+  <button class='big-button'><%= link_to 'Post a Job', new_job_path %></button>
+
 <% end %>

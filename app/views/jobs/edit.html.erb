@@ -2,6 +2,4 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Delete', job_path(@job), method: :delete %> |
-<%= link_to 'Job', @job %> | 
-<%= link_to 'Home', jobs_path %>
+<%= button_to 'Delete', job_path(@job), method: :delete %>

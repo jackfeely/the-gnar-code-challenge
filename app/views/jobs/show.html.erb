@@ -1,24 +1,34 @@
-<h1>Job ID: <%= @job.id %></h1>
+<div id='post'>
 
-<p>
-  <strong>Poster:</strong>
-  <%= @job.poster %>
-</p>
+  <p>
+    <strong>ID:</strong>
+    <%= @job.id %>
+  </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @job.category %>
-</p>
+  <p>
+    <strong>Poster:</strong>
+    <%= @job.poster %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @job.location %>
-</p>
+  <p>
+    <strong>Category:</strong>
+    <%= @job.category %>
+  </p>
 
-<p>
-  <strong>Status:</strong>
-  <%= @job.status %>
-</p>
+  <p>
+    <strong>Location:</strong>
+    <%= @job.location %>
+  </p>
 
-<%= link_to 'Edit', edit_job_path(@job) %> |
-<%= link_to 'Home', jobs_path %>
+  <p>
+    <strong>Status:</strong>
+    <%= @job.status.capitalize %>
+  </p>
+
+  <p>
+    <strong>Date:</strong>
+    <%= @job.created_at.strftime('%D') %>
+  </p>
+</div>
+
+<button class='big-button'><%= link_to 'Edit', edit_job_path(@job) %></button><br><br>
