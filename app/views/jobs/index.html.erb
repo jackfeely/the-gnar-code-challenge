@@ -4,17 +4,32 @@
   <%= link_to 'New Job', new_job_path %>
 
 <% else %>
-  <ul>
-    <% @jobs.each do |job| %>
-      <li>
-        <%= link_to "#{job.poster}", job_path(job) %> |
-        <%= job.category %> |
-        <%= job.status %> |
-        <%= job.created_at %> | 
-        <%= link_to 'Edit', edit_job_path(job) %>
-      </li>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Poster</th>
+        <th>Category</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <% @jobs.sort_by { |job_obj| job_obj[:created_at] }.each do |job| %>
+      <tbody>
+        <tr>
+          <td><%= job.created_at.strftime('%D') %></td>
+          <td><%= job.poster %></td>
+          <td><%= job.category %></td>
+          <td><%= job.status %></td>
+          <td><%= link_to 'Edit', edit_job_path(job) %></td>
+        </tr>
+      </tbody>
+
     <% end %>
-  </ul>
+  </table>
 
   <%= link_to 'New Job', new_job_path %>
 <% end %>
