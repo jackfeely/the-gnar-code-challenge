@@ -1,2 +1,20 @@
 <h1>job postings</h1>
-<%= link_to 'New Job', new_job_path %>
+
+<% if @jobs.empty? %>
+  <%= link_to 'New Job', new_job_path %>
+
+<% else %>
+  <ul>
+    <% @jobs.each do |job| %>
+      <li>
+        <%= link_to "#{job.poster}", job_path(job) %> |
+        <%= job.category %> |
+        <%= job.status %> |
+        <%= job.created_at %> | 
+        <%= link_to 'Edit', edit_job_path(job) %>
+      </li>
+    <% end %>
+  </ul>
+
+  <%= link_to 'New Job', new_job_path %>
+<% end %>
