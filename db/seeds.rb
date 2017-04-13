@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+jobs = [
+  {poster: 'Joel', category: 'waste removal', location: 'Newark', status: 'new'},
+  {poster: 'Jim', category: 'moving', location: 'Brooklyn', status: 'pending'},
+  {poster: 'James', category: 'painting', location: 'Manhattan', status: 'complete'}
+]
+
+jobs.each do |job|
+  Job.create(poster: job[:poster], category: job[:category], location: job[:location], status: job[:status])
+end
