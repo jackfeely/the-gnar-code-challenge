@@ -1,34 +1,12 @@
+<h1>Job</h1>
+
 <div id='post'>
-
-  <p>
-    <strong>ID:</strong>
-    <%= @job.id %>
-  </p>
-
-  <p>
-    <strong>Poster:</strong>
-    <%= @job.poster %>
-  </p>
-
-  <p>
-    <strong>Category:</strong>
-    <%= @job.category %>
-  </p>
-
-  <p>
-    <strong>Location:</strong>
-    <%= @job.location %>
-  </p>
-
-  <p>
-    <strong>Status:</strong>
-    <%= @job.status.capitalize %>
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= @job.created_at.strftime('%D') %>
-  </p>
+  <p><b>ID:</b> <%= @job.id %></p>
+  <p><b>Poster:</b> <%= @job.poster.capitalize %></p>
+  <p><b>Category:</b> <%= @job.category.capitalize %></p>
+  <p><b>Location:</b> <%= @job.location.capitalize %></p>
+  <p><b>Status:</b> <%= @job.status.capitalize %></p>
+  <p><b>Date:</b> <%= @job.created_at.strftime('%D') %></p>
 </div>
 
-<button class='big-button'><%= link_to 'Edit', edit_job_path(@job) %></button><br><br>
+<button class='big-button'><%= link_to 'Edit', edit_job_path(@job) %></button>

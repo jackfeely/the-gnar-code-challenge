@@ -8,22 +8,24 @@
     </ul>
   <% end %>
 
-  <div>
-    <%= f.label :poster %><br>
-    <%= f.text_field :poster %><br><br>
-  </div>
-  <div>
-    <%= f.label :category %><br>
-    <%= f.text_field :category %><br><br>
-  </div>
-  <div>
-    <%= f.label :location %><br>
-    <%= f.text_field :location %><br><br>
-  </div>
-  <div>
-    <%= f.label :status %><br>
-    <%= f.select :status, [['New', 'new'], ['Pending', 'pending'], ['Complete', 'complete']] %><br><br>
-  </div>
+  <div id='form'>
+    <div>
+      <%= f.label :poster %><br>
+      <%= f.text_field :poster %><br><br>
+    </div>
+    <div>
+      <%= f.label :category %><br>
+      <%= f.text_field :category %><br><br>
+    </div>
+    <div>
+      <%= f.label :location %><br>
+      <%= f.text_field :location %><br><br>
+    </div>
+    <div>
+      <%= f.label :status %><br>
+      <%= f.select :status, [['New', 'new'], ['Pending', 'pending'], ['Complete', 'complete']] %><br><br>
+    </div>
+  </div><br>
 
   <div>
     <%= f.submit %><br><br>

@@ -15,3 +15,13 @@ Create a rails app based on the specifications listed above. You don't need to g
 The skeleton app contains enough gems to get going (feel free to add more) and a Vagrant configuration file. Simply run:
 
     $ vagrant up
+
+
+## Running the App
+- `bundle install`
+- `bin/rake db:setup` (runs migration and seeds database)
+- `rails server`
+
+## Running the tests
+- `bundle install`
+- `bin/rake test

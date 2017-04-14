@@ -6,7 +6,6 @@
 <% else %>
 
   <table>
-
     <thead>
       <tr>
         <th>Date</th>
@@ -21,7 +20,7 @@
       <tbody>
         <tr>
           <td><%= job.created_at.strftime('%D') %></td>
-          <td><%= job.poster %></td>
+          <td><%= job.poster.capitalize %></td>
           <td><%= job.category.capitalize %></td>
           <td><%= job.status.capitalize %></td>
           <td><%= link_to 'View', job_path(job) %> | <%= link_to 'Edit', edit_job_path(job) %> | <%= link_to 'Delete', job_path(job), method: :delete %></td>
