@@ -40,9 +40,9 @@ class JobsController < ApplicationController
   end
 
   private
-    def set_job
-      @job = Job.find(params[:id])
-    end
+    # def set_job
+    #   @job = Job.find(params[:id])
+    # end
 
     def job_params
       params.require(:job).permit(:poster, :category, :location, :status)

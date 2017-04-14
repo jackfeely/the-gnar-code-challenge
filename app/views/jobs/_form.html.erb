@@ -1,5 +1,13 @@
 <%= form_for(@job) do |f| %>
 
+  <% if @job.errors.any? %>
+    <ul class='errors'>
+    <% @job.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  <% end %>
+
   <div>
     <%= f.label :poster %><br>
     <%= f.text_field :poster %><br><br>
